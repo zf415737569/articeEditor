@@ -1,17 +1,1090 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<html class="pixel-ratio-1">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Access-Control-Allow-Origin" content="*" />
+		<meta
+			name="viewport"
+			content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+		/>
+		<title>WECHAT_EMPTY_TITLE</title>
+		<link
+			href="https://staticoss.bxdaka.com/static/css/summernote.css"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://staticoss.bxdaka.com/static/css/weui.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://staticoss.bxdaka.com/static/css/jquery-weui.min.css"
+		/>
+		<style type="text/css">
+			::-webkit-scrollbar {
+				/*隐藏滚轮*/
+				display: none;
+			}
+
+			.hidden {
+				display: none !important;
+			}
+
+			body {
+				background: #fff;
+			}
+
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				font-size: 19px;
+			}
+
+			li {
+				list-style: none;
+			}
+
+			a {
+				font-size: 14px;
+				color: #333;
+				text-decoration: none;
+			}
+
+			a:active {
+				text-decoration: none;
+			}
+
+			article,
+			section {
+				max-width: 100% !important;
+				box-sizing: border-box;
+			}
+
+			pre {
+				white-space: pre-wrap;
+				/* css-3 */
+				white-space: -moz-pre-wrap;
+				/* Mozilla, since 1999 */
+				white-space: -pre-wrap;
+				/* Opera 4-6 */
+				white-space: -o-pre-wrap;
+				/* Opera 7 */
+				word-wrap: break-word;
+				/* Internet Explorer 5.5+ */
+			}
+
+			.container,
+			textarea,
+			input {
+				color: #333;
+				font-family: 'PingFangSC-Regular', '微软雅黑', 'Microsoft Yahei', 'Avenir',
+					Helvetica, Arial, sans-serif;
+				font-size: 17px;
+				padding-bottom: 25px;
+				background: #f6f6f6;
+			}
+
+			.clear:after,
+			.product-info:after,
+			.consult-column:after {
+				clear: both;
+				content: '.';
+				display: block;
+				height: 0;
+				overflow: hidden;
+				visibility: hidden;
+			}
+
+			.fixed_center {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+			}
+
+			img {
+				max-width: 100% !important;
+				height: auto !important;
+				margin: 0 auto;
+			}
+
+			/*编辑文章提示*/
+			.edit_notice_wrap {
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				top: 0;
+				left: 0;
+				background: rgba(0, 0, 0, 0.6);
+				color: #fff;
+				text-align: center;
+				z-index: 1000;
+			}
+
+			.edit_notice_wrap .edit_notice_title {
+				font-size: 36px;
+				font-weight: bold;
+				text-align: center;
+				margin-top: 12.8%;
+				line-height: 50px;
+			}
+
+			.edit_notice_wrap .edit_notice_y {
+				color: #fdc50a;
+			}
+
+			.edit_notice_wrap .edit_notice_img {
+				width: 240px;
+				margin-top: 5%;
+			}
+
+			.edit_notice_wrap .notice_btn {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				height: 50px;
+				margin-top: 5.5%;
+			}
+
+			.notice_btn .notice_btn_item {
+				width: 140px;
+				height: 50px;
+				border-radius: 4px;
+				line-height: 50px;
+				text-align: center;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+
+			.notice_btn .no_notice {
+				border: 1px solid rgba(255, 255, 255, 1);
+			}
+
+			.notice_btn .notice_known {
+				background: #e02e42;
+				margin-left: 15px;
+			}
+
+			/*文章标题, 背景图*/
+			.article_title_wrap {
+				width: 100%;
+				padding: 15px;
+				background: #fff;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+
+			.article_title_wrap .article_title {
+				font-weight: bold;
+				line-height: 24px;
+				margin-bottom: 18px;
+			}
+
+			.article_title_wrap .article_title_other {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+			}
+
+			.article_title_wrap .article_title_des {
+				font-size: 14px;
+				color: #999999;
+				-webkit-box-flex: 1;
+				-ms-flex: 1;
+				flex: 1;
+				line-height: 22px;
+				margin-right: 10px;
+			}
+
+			.article_title_wrap .article_cover_img {
+				position: relative;
+				width: 80px;
+				height: 80px;
+			}
+
+			.article_cover_img .inner_cover_img {
+				width: 100%;
+				height: 100% !important;
+			}
+
+			.article_cover_img .opacity_cover {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.3);
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				font-size: 14px;
+				color: #fff;
+			}
+
+			.opacity_cover .opacity_cover_img {
+				width: 24px;
+				margin-bottom: 5px;
+			}
+
+			/*文章摘要*/
+			.article_des_wrap .article_des_title {
+				font-size: 14px;
+				padding-left: 15px;
+				line-height: 45px;
+			}
+
+			.article_des_wrap .article_des_con {
+				padding: 10px 15px;
+				background: #fff;
+			}
+
+			.article_des_con .no_des {
+				font-size: 17px;
+				line-height: 50px;
+				color: #b6b6b6;
+			}
+
+			/*文章内容*/
+			.art-content {
+				padding: 0 15px 30px;
+				max-width: 100%;
+				overflow: hidden;
+			}
+
+			.art-content .art-section {
+				margin-bottom: 30px;
+				padding: 0 15px;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+				line-height: 34px;
+			}
+
+			.art-content .padding_none {
+				padding-bottom: 0;
+			}
+
+			.art-content .art-section:nth-last-child(1) {
+				margin-bottom: 0;
+			}
+
+			/* .art-content .art-section p {
+		padding-bottom: 5px;
+	  } */
+
+			/*产品*/
+			.art-content .product-section {
+				background: #ffffff;
+				padding: 15px !important;
+			}
+
+			.product-section .product-info img {
+				width: 72px;
+				height: 72px;
+				float: left;
+			}
+
+			.product-section .product-info h3 {
+				white-space: nowrap;
+				font-size: 17px;
+				font-weight: bold;
+				margin-left: 87px;
+				text-align: left;
+				overflow: hidden;
+				line-height: 24px;
+				-o-text-overflow: ellipsis;
+				text-overflow: ellipsis;
+			}
+
+			.product-section .product-info .cont {
+				font-size: 14px;
+				line-height: 21px;
+				text-align: left;
+				color: #999999;
+				margin: 6px 0 0 87px;
+				overflow: hidden;
+				-o-text-overflow: ellipsis;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+			}
+
+			.product-section .consult-column {
+				/* padding-bottom: 15px; */
+				margin-top: 25px;
+			}
+
+			.product-section .consult-column img {
+				width: 32px;
+				height: 32px;
+				border-radius: 50%;
+				font-size: 14px;
+				float: left;
+			}
+
+			.product-section .consult-column i {
+				line-height: 32px;
+				font-style: normal;
+				margin-left: 10px;
+				float: left;
+			}
+
+			.product-section .consult-column span {
+				padding: 6px 12px;
+				background: #e02e42;
+				border-radius: 2px;
+				color: #fff;
+				text-align: center;
+				line-height: 20px;
+				float: right;
+			}
+
+			.product-section .hr,
+			.product-section .scale-half {
+				border: none;
+			}
+
+			/*编辑*/
+			.edit_top {
+				position: relative;
+				height: 60px;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+			}
+
+			.edit_top .edit_add_wrap {
+				width: 30px;
+				height: 30px;
+			}
+
+			.edit_top .edit_add_con_wrap {
+				position: absolute;
+				top: 56px;
+				left: 50%;
+				-webkit-transform: translateX(-50%);
+				-ms-transform: translateX(-50%);
+				transform: translateX(-50%);
+				z-index: 8;
+			}
+
+			.edit_top .edit_add_con_wrap::before {
+				content: '';
+				width: 0px;
+				height: 0px;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-bottom: 5px solid #fff;
+				position: absolute;
+				top: -5px;
+				left: 50%;
+				-webkit-transform: translateX(-50%);
+				-ms-transform: translateX(-50%);
+				transform: translateX(-50%);
+			}
+
+			.edit_top .edit_add_con {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				padding: 12px 14px;
+				border-radius: 5px;
+				background: #fff;
+				line-height: 22px;
+			}
+
+			.edit_add_con .edit_btn_item_t {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				width: 62px;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				font-size: 16px;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+			}
+
+			.art_section_edit .edit_btn_item_t {
+				-webkit-box-flex: 1;
+				-ms-flex: 1;
+				flex: 1;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				font-size: 16px;
+			}
+
+			.edit_add_con .edit_btn_item_t:nth-last-child(1) {
+				margin-right: 0;
+			}
+
+			.edit_btn_item_t .edit_btn_txt_icon_t {
+				width: 36px;
+				height: 36px;
+				background-image: url(https://staticoss.bxdaka.com/static/images/edit_txt.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+
+			.edit_btn_item_t .edit_btn_img_icon_t {
+				width: 36px;
+				height: 36px;
+				background-image: url(https://staticoss.bxdaka.com/static/images/edit_img.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+
+			.edit_btn_item_t .edit_btn_pro_icon_t {
+				width: 36px;
+				height: 36px;
+				background-image: url(https://staticoss.bxdaka.com/static/images/edit_pro.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+
+			.edit_btn_item_t .edit_btn_txt_t {
+				margin-top: 5px;
+				font-weight: normal;
+				color: #333;
+				font-size: 16px;
+			}
+
+			.art_section_edit .edit_btn_item {
+				-webkit-box-flex: 1;
+				-ms-flex: 1;
+				flex: 1;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				font-size: 16px;
+			}
+
+			.edit_btn_item .edit_btn_delete_icon {
+				width: 17px;
+				height: 17px;
+				background-image: url(https://staticoss.bxdaka.com/static/images/c_delete_icon.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+				margin: 4px 3px 0 0;
+			}
+
+			.edit_btn_item .edit_btn_edit_icon {
+				width: 17px;
+				height: 17px;
+				background-image: url(https://staticoss.bxdaka.com/static/images/c_edit_icon.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+				margin: 4px 3px 0 0;
+			}
+
+			.edit_btn_item .edit_btn_txt_icon,
+			.edit_btn_item .edit_btn_img_icon,
+			.edit_btn_item .edit_btn_pro_icon,
+			.edit_btn_item .edit_btn_house_icon {
+				width: 17px;
+				height: 17px;
+				background-image: url(https://staticoss.bxdaka.com/static/images/c_add_icon.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+				margin: 4px 3px 0 0;
+			}
+
+			.edit_btn_item .edit_btn_txt {
+				margin-top: 5px;
+				font-weight: normal;
+				color: #333;
+				font-size: 16px;
+				font-style: normal;
+			}
+
+			/*编辑文本弹出层*/
+			textarea {
+				display: block;
+				width: 92%;
+				outline: none;
+				resize: none;
+				border: none;
+				font-size: 17px;
+				margin: 15px auto;
+				padding: 8px 15px;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+
+			#edit_text .edit_text_btn {
+				width: 92%;
+				margin: 20px auto;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-pack: justify;
+				-ms-flex-pack: justify;
+				justify-content: space-between;
+			}
+
+			.edit_text_btn .edit_text_cancel,
+			.edit_text_btn .edit_text_confirm {
+				-webkit-box-flex: 1;
+				-ms-flex: 1;
+				flex: 1;
+				height: 50px;
+				text-align: center;
+				border-radius: 4px;
+				font-size: 16px;
+				line-height: 50px;
+			}
+
+			.edit_text_btn .edit_text_cancel {
+				background: #e2e2e2;
+			}
+
+			.edit_text_btn .edit_text_confirm {
+				background: #e02e42;
+				margin-left: 20px;
+				color: #fff;
+			}
+
+			.art-content .cur_edit_con {
+				display: block;
+				width: 100%;
+				margin-left: 0 !important;
+				margin-right: 0 !important;
+				margin-bottom: 0 !important;
+				background: #ffeeef !important;
+				border: 1px dashed #e02e42 !important;
+				padding: 10px 15px;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+				box-shadow: 0px 2px 5px #999;
+				float: none !important;
+			}
+
+			/*编辑按钮框*/
+			.art_section_edit {
+				position: absolute;
+				left: 15px;
+				right: 15px;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-pack: distribute;
+				justify-content: space-around;
+				height: 52px;
+				background: #fff;
+				margin-bottom: 20px;
+				box-shadow: 0px 2px 5px #999;
+				z-index: 8;
+			}
+
+			.footer,
+			.footer_bar {
+				height: 54px;
+			}
+
+			.footer {
+				width: 100%;
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				z-index: 9;
+			}
+
+			.footer {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+			}
+
+			.footer .footer_l,
+			.footer .footer_r {
+				-webkit-box-flex: 1;
+				-ms-flex: 1;
+				flex: 1;
+				text-align: center;
+				line-height: 54px;
+				font-size: 16px;
+			}
+
+			.footer .footer_l {
+				background: #eee;
+			}
+
+			.footer .footer_r {
+				background: #e02e42;
+				color: #fff;
+			}
+
+			/*隐藏audio， video下载按钮*/
+			video::-webkit-media-controls-enclosure {
+				overflow: hidden;
+			}
+
+			video::-webkit-media-controls-panel {
+				width: calc(100% + 30px);
+			}
+
+			audio::-internal-media-controls-download-button {
+				display: none;
+			}
+
+			audio::-webkit-media-controls-enclosure {
+				overflow: hidden;
+			}
+
+			audio::-webkit-media-controls-panel {
+				width: calc(100% + 30px);
+			}
+
+			video,
+			audio,
+			iframe {
+				width: 100% !important;
+			}
+
+			/*weui默认主题颜色*/
+			.weui-dialog .weui-dialog__bd {
+				color: #333;
+			}
+
+			.weui-dialog .weui-dialog__btn {
+				color: #e02e42;
+			}
+
+			.weui-dialog .continue_edit {
+				color: #333;
+			}
+
+			.weui-dialog .free_edit_num {
+				color: #db273d;
+			}
+
+			.edit_article {
+				position: fixed;
+				bottom: 50px;
+				right: 15px;
+				width: 90px;
+				height: 86px;
+				z-index: 1;
+			}
+
+			.art-section strong,
+			.art-section b {
+				color: #e02e42;
+			}
+
+			.note-popover .popover-content,
+			.panel-heading.note-toolbar {
+				display: none !important;
+			}
+
+			/*选择产品*/
+			.pro_content {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				max-height: 485px;
+				background: #fff;
+				border-radius: 16px 16px 0 0;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+
+			.pro_content .pro_slide_bar {
+				width: 100%;
+				height: 58px;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+			}
+
+			.pro_slide_bar .pro_slide_ul {
+				white-space: nowrap;
+				padding: 0 13px;
+				-webkit-box-flex: 1;
+				-ms-flex: 1;
+				flex: 1;
+				overflow: auto;
+				-webkit-overflow-scrolling: touch;
+			}
+
+			.pro_slide_ul .pro_slide_li {
+				display: inline-block;
+				line-height: 55px;
+				font-size: 16px;
+				margin: 0 7px;
+			}
+
+			.pro_slide_li .pro_item_line {
+				width: 15px;
+				height: 3px;
+				background: #fff;
+				margin: 0 auto;
+			}
+
+			.pro_slide_ul .pro_slide_active {
+				color: #e02e42;
+			}
+
+			.pro_slide_active .pro_item_line {
+				background: #e02e42;
+			}
+
+			.pro_slide_bar .close_con {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				width: 58px;
+				height: 58px;
+			}
+
+			.close_con img {
+				width: 18px;
+				height: 18px;
+			}
+
+			.pro_content .pro_wrapper {
+				-webkit-box-flex: 1;
+				-ms-flex: 1;
+				flex: 1;
+				overflow: auto;
+				-webkit-overflow-scrolling: touch;
+			}
+
+			.pro_content .pro_list_con {
+				margin: 0 15px 10px;
+				background: #f7f7f7;
+				padding: 15px;
+			}
+
+			.pro_list_con img {
+				width: 72px;
+				height: 72px;
+				float: left;
+			}
+
+			.pro_list_con .pro_list_info {
+				margin-left: 87px;
+			}
+
+			.pro_list_con .pro_list_title {
+				font-size: 17px;
+				line-height: 24px;
+				font-weight: bold;
+			}
+
+			.pro_list_con .pro_list_des {
+				font-size: 15px;
+				color: #999999;
+				line-height: 21px;
+				margin-top: 6px;
+			}
+
+			.weui-loadmore {
+				display: none;
+			}
+
+			.no_more {
+				line-height: 30px;
+				font-size: 13px;
+				color: #999;
+				text-align: center;
+				display: none;
+			}
+
+			.edit_btn_item:active {
+				background: #f3f3f3;
+			}
+
+			.footer_l:active {
+				background: #ccc;
+			}
+
+			.notice_known:active,
+			#save_article:active {
+				background: #be2738;
+			}
+
+			@media screen and (max-width: 374px) {
+				.edit_notice_wrap .edit_notice_img {
+					width: 200px;
+				}
+			}
+
+			/*135编辑器*/
+			._135editor {
+				padding: 0 15px;
+			}
+
+			.art-section-new {
+				margin: 15px 0;
+				padding: 0 15px;
+			}
+
+			.content {
+				padding: none;
+			}
+
+			/*反馈图片底部弹框*/
+			.feed_container {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				max-height: 85%;
+				background: #fff;
+				border-radius: 16px 16px 0 0;
+				color: #333;
+			}
+
+			.feed_container .feed_title {
+				height: 44px;
+				font-size: 16px;
+				line-height: 44px;
+				text-align: center;
+				border-bottom: 1px solid #e5e5e5;
+				color: #323232;
+				box-sizing: border-box;
+			}
+
+			.feed_container .feed_con {
+				width: 100%;
+				flex: 1;
+				padding: 4% 0 0 4%;
+				font-size: 15px;
+				overflow: scroll;
+			}
+
+			.feed_con .feed_item {
+				position: relative;
+				width: 44%;
+				margin-right: 4%;
+				text-align: center;
+				float: left;
+			}
+
+			.feed_con .feed_item:nth-child(2n) {
+				margin-right: 0;
+			}
+
+			.feed_item .feed_item_img_w {
+				position: relative;
+				width: 100%;
+				height: 0;
+				padding-bottom: 100%;
+			}
+
+			.feed_item .feed_item_img {
+				position: absolute;
+				width: 100%;
+				height: 100% !important;
+				left: 0;
+			}
+
+			.feed_item .filter_modal {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				background: rgba(0, 0, 0, 0.6);
+				z-index: 1;
+			}
+
+			.feed_footer {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				height: 54px;
+				line-height: 54px;
+			}
+
+			.feed_footer .feed_footer_l,
+			.feed_footer .feed_footer_r {
+				-webkit-box-flex: 1;
+				-ms-flex: 1;
+				flex: 1;
+				text-align: center;
+				font-size: 16px;
+			}
+
+			.feed_footer .feed_footer_l {
+				background: #eee;
+			}
+
+			.feed_footer .feed_footer_r {
+				background: #e02e42;
+				color: #fff;
+			}
+
+			.feed_footer_l:active {
+				background: #ccc;
+			}
+
+			.feed_footer_r:active {
+				background: #be2738;
+			}
+
+			.feed_item .select_icon {
+				position: absolute;
+				width: 24px;
+				height: 24px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				border: 1px solid #fff;
+				background: rgba(0, 0, 0, 0.2);
+				top: 5px;
+				right: 5px;
+				box-sizing: border-box;
+				z-index: 2;
+			}
+
+			.feed_item .ban_icon {
+				position: absolute;
+				width: 24px;
+				height: 24px;
+				top: 5px;
+				right: 5px;
+				z-index: 2;
+			}
+
+			.feed_item_active .select_icon {
+				background: rgba(203, 39, 61, 1);
+				border: 1px solid rgba(203, 39, 61, 1);
+			}
+
+			.feed_item .select_icon img {
+				width: 12px;
+			}
+
+			.feed_item .feed_item_txt {
+				line-height: 21px;
+				margin: 10px 0 15px 0;
+			}
+		</style>
+		<!-- <link
+			rel="stylesheet"
+			type="text/css"
+			href="https://staticoss.bxdaka.com/static/app_47/editArticle.css?version=1.5"
+		/> -->
+		<style id="__WXWORK_INNER_SCROLLBAR_CSS">
+			::-webkit-scrollbar {
+				width: 12px !important;
+				height: 12px !important;
+			}
+			::-webkit-scrollbar-track:vertical {
+			}
+			::-webkit-scrollbar-thumb:vertical {
+				background-color: rgba(136, 141, 152, 0.5) !important;
+				border-radius: 10px !important;
+				background-clip: content-box !important;
+				border: 2px solid transparent !important;
+			}
+			::-webkit-scrollbar-track:horizontal {
+			}
+			::-webkit-scrollbar-thumb:horizontal {
+				background-color: rgba(136, 141, 152, 0.5) !important;
+				border-radius: 10px !important;
+				background-clip: content-box !important;
+				border: 2px solid transparent !important;
+			}
+			::-webkit-resizer {
+				display: none !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app"></div>
+		<script
+			type="text/javascript"
+			async=""
+			charset="utf-8"
+			src="https://c.cnzz.com/core.php?web_id=1277638470&amp;t=z"
+		></script>
+		<script src="https://staticoss.bxdaka.com/static/js/jquery-2.1.4.min.js"></script>
+		<script src="https://staticoss.bxdaka.com/static/js/jquery-weui.min.js"></script>
+		<script src="https://staticoss.bxdaka.com/static/js/fastclick.min.js"></script>
+		<script
+			type="text/javascript"
+			src="https://staticoss.bxdaka.com/static/js/jweixin-1.4.0.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://staticoss.bxdaka.com//weixinAudio1.js"
+		></script>
+		<script src="https://staticoss.bxdaka.com/static/js/bootstrap.js"></script>
+		<script src="https://staticoss.bxdaka.com/static/js/summernote1.0.2.js"></script>
+		<script
+			type="text/javascript"
+			src="https://s23.cnzz.com/z_stat.php?id=1277638470&amp;web_id=1277638470"
+		></script>
+	</body>
 </html>
