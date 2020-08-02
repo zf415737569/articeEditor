@@ -19,21 +19,29 @@
 			<div class="art_section_edit_wrap" style="display: none;">
 				<div class="art_section_edit" style="width: 345px;">
 					<div class="edit_btn_item" @click="deleteEl">
-						<div class="edit_btn_delete_icon"></div>
+						<!-- <div class="edit_btn_delete_icon"></div> -->
 						<span class="edit_btn_txt">删除</span>
 					</div>
 					<div class="edit_btn_item edit_edit_btn" @click="editEdit">
-						<div class="edit_btn_edit_icon"></div>
+						<!-- <div class="edit_btn_edit_icon"></div> -->
 						<span class="edit_btn_txt">修改</span>
 					</div>
 					<div class="edit_btn_item add_text_btn" @click="editAddText">
-						<div class="edit_btn_txt_icon"></div>
+						<!-- <div class="edit_btn_txt_icon"></div> -->
 						<span class="edit_btn_txt">文字</span>
 					</div>
-					<div class="edit_btn_item add_img_btn" @click="editAddImg">
-						<div class="edit_btn_img_icon"></div>
-						<span class="edit_btn_txt">图片</span>
-					</div>
+
+					<van-uploader
+						class="edit_btn_item add_img_btn"
+						:max-count="1"
+						:after-read="afterRead3"
+					>
+						<div @click="editAddImg">
+							<!-- <div class="edit_btn_img_icon"></div> -->
+							<span class="edit_btn_txt">图片</span>
+						</div>
+					</van-uploader>
+
 					<!-- <div class="edit_btn_item add_pro_btn" onclick="editAddPro()">
 			<div class="edit_btn_pro_icon"></div>
 			<span class="edit_btn_txt">产品</span>
@@ -3192,21 +3200,24 @@
 				</div>
 				<div class="article_title_other">
 					<div class="article_title_des">书读一半，导师跑了</div>
-					<div class="article_cover_img">
-						<div class="opacity_cover">
-							<img
-								class="opacity_cover_img"
-								src="https://staticoss.bxdaka.com/static/images/camera_icon.png"
-								alt="相机"
-							/>
-							<span class="opacity_cover_text">点击更换</span>
+					<van-uploader :after-read="afterRead1" :max-count="1">
+						<div class="article_cover_img">
+							<div class="opacity_cover">
+								<img
+									class="opacity_cover_img"
+									src="https://staticoss.bxdaka.com/static/images/camera_icon.png"
+									alt="相机"
+								/>
+								<span class="opacity_cover_text">点击更换</span>
+							</div>
+							<!-- <img
+								class="inner_cover_img"
+								src="http://static.bxdaka.com/article_upload_pic_cover_15430381595071881"
+								alt="封面图"
+							/> -->
+							<img class="inner_cover_img" :src="imgUrl" alt="封面图" />
 						</div>
-						<img
-							class="inner_cover_img"
-							src="http://static.bxdaka.com/article_upload_pic_cover_15430381595071881"
-							alt="封面图"
-						/>
-					</div>
+					</van-uploader>
 				</div>
 			</div>
 			<div class="edit_top">
@@ -3222,10 +3233,15 @@
 							<div class="edit_btn_txt_icon_t"></div>
 							<span class="edit_btn_txt">文字</span>
 						</div>
-						<div class="edit_btn_item_t">
-							<div class="edit_btn_img_icon_t" @onclick="addTopImg"></div>
-							<span class="edit_btn_txt">图片</span>
-						</div>
+						<van-uploader :after-read="afterRead2" :max-count="1">
+							<div class="edit_btn_item_t">
+								<div
+									class="edit_btn_img_icon_t"
+									@onclick="addTopImg"
+								></div>
+								<span class="edit_btn_txt">图片</span>
+							</div>
+						</van-uploader>
 					</div>
 				</div>
 			</div>
@@ -4139,7 +4155,255 @@ try {
 }
 var curCompanyId = companyArr.length > 0 ? companyArr[0].company_id : '' // 当前点击的公司
 var article_cover_media_id = ''
+function articleEventListener() {
+	$('.art-content')
+		.children()
+		.on('click', function(e) {
+			console.warn(
+				'点击任何地方',
+				$(e.target)
+					.parent()
+					.is('.van-uploader__input-wrapper')
+			)
+			var nodeName = e.target.nodeName.toLowerCase()
+			console.log(22, nodeName)
+			if (
+				$(e.target)
+					.parents()
+					.is('.art_section_edit') ||
+				$(e.target).hasClass('iframe_div') ||
+				$(e.target)
+					.parents()
+					.is('._135editor') ||
+				$(e.target).hasClass('_135editor') ||
+				$(e.target).hasClass('_iframe_editor')
+			) {
+				if (
+					$(e.target)
+						.parent()
+						.is('.van-uploader__input-wrapper')
+				) {
+					return true
+				} else {
+					return false
+				}
+			}
+			if (
+				nodeName == 'img' ||
+				nodeName == 'gift' ||
+				nodeName == 'video' ||
+				nodeName == 'audio'
+			) {
+				$('.edit_edit_btn').hide()
+			} else {
+				$('.edit_edit_btn').show()
+			}
+			// 删除占位元素
+			$('._holder').remove()
+			$('.art_section_edit').removeClass('hidden')
+			// $('.edit_add_con_wrap').hide();
+			$('.art-section').css('margin-bottom', '30px')
+			$('.cur_edit_con')
+				.closest('.art-section')
+				.removeClass('padding_none')
+			$('.cur_edit_con').removeClass('cur_edit_con')
+			$('.art-content')
+				.find('.cur_art_section')
+				.removeClass('cur_art_section')
+			$(e.target).addClass('cur_edit_con')
+			$('.cur_edit_con')
+				.closest('.art-section')
+				.addClass('padding_none')
+			$('.cur_edit_con').after($('.art_section_edit'))
+			// 如果当前修改的是art-section
+			if ($('.cur_edit_con').hasClass('art-section')) {
+				$('.cur_edit_con').css('margin-bottom', '0')
+				$('.art_section_edit').css('margin-bottom', '30px')
+			}
+			scrollToEl()
+		})
+}
+// 滚动到指定位置
+function scrollToEl(id) {
+	var __total =
+		$('.cur_edit_con').offset().top +
+		$('.cur_edit_con').height() +
+		$('.art_section_edit').height()
+	var __height = $(window).scrollTop() + $(window).height() - $('.footer').height()
+	if (__total < __height) {
+		return
+	}
+	$('html, body').animate(
+		{
+			scrollTop: $(window).scrollTop() + __total - __height + 30
+		},
+		200
+	)
+}
+// 是否显示文章摘要
+function checkArticleDes() {
+	article_des
+		? $('.article_title_des').text(article_des)
+		: $('.article_title_des').text(article_title)
+}
+// 获取险种
+function getInsureList(companyId, pageIndex) {
+	$('.pro_wrapper .weui-loadmore').show()
+	$.ajax({
+		url: '/index.php/Index/tthk/getProducts',
+		type: 'post',
+		data: { companyId: companyId, pageIndex: pageIndex },
+		dataType: 'json',
+		success: function(res) {
+			// 获取产品列表
+			var proList = res.list
+			var _html = ''
+			loading = false
+			if (res.code == 2) {
+				$('.pro_wrapper .weui-loadmore').hide()
+				$('.no_more').show()
+				return
+			}
+			for (var i = 0; i < proList.length; i++) {
+				var features = '' // 产品描述
+				if (proList[i].features) {
+					proList[i].features = proList[i].features
+						.replace(/&lt;/g, '<')
+						.replace(/&gt;/g, '>')
+						.replace(/&amp;/g, '&')
+						.replace(/&quot;/g, '"')
+						.replace(/&apos;/g, "'")
+					features = proList[i].features
+				} else {
+					features = '专注保险保障本质，为您量身定制专属险种。'
+				}
+				_html +=
+					'<div class="pro_list_con clear" data-risk_id="' +
+					proList[i].product_id +
+					'" data-link="/index.php/Index/Ad/productDetail/product_id/' +
+					proList[i].product_id +
+					'/uid/' +
+					uid +
+					'" data-risk_title="' +
+					proList[i].product_name +
+					'" data-risk_cover="' +
+					proList[i].product_thumb_img_url +
+					'" data-features_info="' +
+					features +
+					'">' +
+					'<img src="' +
+					proList[i].product_thumb_img_url +
+					'" alt="产品图">' +
+					'<div class="pro_list_info">' +
+					'<p class="pro_list_title">' +
+					proList[i].product_name +
+					'</p>' +
+					'<p class="pro_list_des">' +
+					features +
+					'</p>' +
+					'</div>' +
+					'</div>'
+			}
+			$('.pro_content_inner').append(_html)
+			if ($('.pro_content_inner').html() != '') {
+				$('.add_pro_btn').removeClass('hidden')
+			} else {
+				$('.add_pro_btn').addClass('hidden')
+			}
+			// 插入产品  为产品添加点击事件
+			insertPro()
+			$('.pro_wrapper .weui-loadmore').hide()
+		}
+	})
+}
+// 插入产品
+function insertPro() {
+	$('.pro_content_inner .pro_list_con').on('click', function(e) {
+		e.stopPropagation()
+		var risk_id = $(this).data('risk_id')
+		var risk_detail_link = $(this).data('link')
+		var risk_cover = $(this).data('risk_cover')
+		var risk_title = $(this).data('risk_title')
+		var risk_features = $(this).data('features_info')
+		var _html = ''
+		_html +=
+			'<div class="art-section-new product-section" style="padding-bottom:46px;">'
+		_html += '<a href="javascript:void(0);" data-href="' + risk_detail_link + '">'
+		_html += '<div class="product-info">'
+		_html += '<img src="' + risk_cover + '" />'
+		_html += '<h3>' + risk_title + '</h3>'
+		if (risk_features) {
+			_html += '<div class="cont">' + risk_features + '</div>'
+		} else {
+			_html += '<div class="cont">专注保险保障本质，为您量身定制专属险种。</div>'
+		}
+		_html += '</div>'
+		_html += '<div class="hr scale-half product-brd-line hidden"></div>'
+		_html += '<div class="consult-column hidden">'
+		_html += '<img src="' + avatar_url + '" />'
+		_html += '<i>' + nickname.substring(0, 6) + '</i>'
+		_html += '<span>咨询我>></span>'
+		_html += '</div>'
+		_html += '</a>'
+		_html += '</div>'
+		if (isAddTop) {
+			$('.art-content').prepend(_html)
+		} else {
+			if ($('.cur_edit_con').closest('.art-section').length) {
+				// 旧版之前文章的div
+				$('.cur_edit_con')
+					.closest('.art-section')
+					.addClass('cur_art_section')
+				$('.cur_art_section')
+					.next()
+					.hasClass('art_section_edit')
+					? $('.art_section_edit').after(_html)
+					: $('.cur_art_section').after(_html)
+			} else {
+				$('.art_section_edit').after(_html)
+			}
+			// else if ($('.cur_edit_con').closest('.art-section-new').length) {
+			//   // 新版新加的段落，图片，产品都会是art-section-new的类
+			//   $('.cur_edit_con').closest('.art-section-new').addClass('cur_art_section');
+			//   $('.cur_art_section').next().hasClass('art_section_edit') ? $('.art_section_edit').after(_html) : $('.cur_art_section').after(_html);
+			// } else if ($('.cur_edit_con').closest('._135editor').length) {
+			//   // 这个是135编辑器的类
+			//   $('.cur_edit_con').closest('._135editor').addClass('cur_art_section');
+			//   $('.cur_art_section').next().hasClass('art_section_edit') ? $('.art_section_edit').after(_html) : $('.cur_art_section').after(_html);
+			// } else if ($('.cur_edit_con').closest('.other-section').length) {
+			//   // 其他文章的情况
+			//   $('.cur_edit_con').closest('.other-section').addClass('cur_art_section');
+			//   $('.cur_art_section').next().hasClass('art_section_edit') ? $('.art_section_edit').after(_html) : $('.cur_art_section').after(_html);
+			// }
+		}
+		$.toast('插入成功', 'text')
+		// 重置数据
+		isAddTop = false
+		$('.edit_add_con_wrap').addClass('hidden')
+		// articleEventListener();
+		$.closePopup()
+		// 释放
+		stopBodyScroll(false)
+	})
+}
+// 禁止body滚动
+function stopBodyScroll(isFixed) {
+	if (isFixed) {
+		$('body, html').css({
+			overflow: 'hidden'
+		})
+	} else {
+		$('body, html').css({
+			overflow: 'auto'
+		})
+	}
+}
 export default {
+	data() {
+		return {
+			imgUrl: 'http://static.bxdaka.com/article_upload_pic_cover_15430381595071881'
+		}
+	},
 	mounted() {
 		$(document).ready(function() {
 			// 编辑文章提示
@@ -4819,239 +5083,7 @@ export default {
 				})
 			})
 		})
-		function articleEventListener() {
-			$('.art-content')
-				.children()
-				.on('click', function(e) {
-					console.warn('点击任何地方')
-					var nodeName = e.target.nodeName.toLowerCase()
-					if (
-						$(e.target)
-							.parents()
-							.is('.art_section_edit') ||
-						$(e.target).hasClass('iframe_div') ||
-						$(e.target)
-							.parents()
-							.is('._135editor') ||
-						$(e.target).hasClass('_135editor') ||
-						$(e.target).hasClass('_iframe_editor')
-					) {
-						return false
-					}
-					if (
-						nodeName == 'img' ||
-						nodeName == 'gift' ||
-						nodeName == 'video' ||
-						nodeName == 'audio'
-					) {
-						$('.edit_edit_btn').hide()
-					} else {
-						$('.edit_edit_btn').show()
-					}
-					// 删除占位元素
-					$('._holder').remove()
-					$('.art_section_edit').removeClass('hidden')
-					// $('.edit_add_con_wrap').hide();
-					$('.art-section').css('margin-bottom', '30px')
-					$('.cur_edit_con')
-						.closest('.art-section')
-						.removeClass('padding_none')
-					$('.cur_edit_con').removeClass('cur_edit_con')
-					$('.art-content')
-						.find('.cur_art_section')
-						.removeClass('cur_art_section')
-					$(e.target).addClass('cur_edit_con')
-					$('.cur_edit_con')
-						.closest('.art-section')
-						.addClass('padding_none')
-					$('.cur_edit_con').after($('.art_section_edit'))
-					// 如果当前修改的是art-section
-					if ($('.cur_edit_con').hasClass('art-section')) {
-						$('.cur_edit_con').css('margin-bottom', '0')
-						$('.art_section_edit').css('margin-bottom', '30px')
-					}
-					scrollToEl()
-				})
-		}
-		// 是否显示文章摘要
-		function checkArticleDes() {
-			article_des
-				? $('.article_title_des').text(article_des)
-				: $('.article_title_des').text(article_title)
-		}
-		// 获取险种
-		function getInsureList(companyId, pageIndex) {
-			$('.pro_wrapper .weui-loadmore').show()
-			$.ajax({
-				url: '/index.php/Index/tthk/getProducts',
-				type: 'post',
-				data: { companyId: companyId, pageIndex: pageIndex },
-				dataType: 'json',
-				success: function(res) {
-					// 获取产品列表
-					var proList = res.list
-					var _html = ''
-					loading = false
-					if (res.code == 2) {
-						$('.pro_wrapper .weui-loadmore').hide()
-						$('.no_more').show()
-						return
-					}
-					for (var i = 0; i < proList.length; i++) {
-						var features = '' // 产品描述
-						if (proList[i].features) {
-							proList[i].features = proList[i].features
-								.replace(/&lt;/g, '<')
-								.replace(/&gt;/g, '>')
-								.replace(/&amp;/g, '&')
-								.replace(/&quot;/g, '"')
-								.replace(/&apos;/g, "'")
-							features = proList[i].features
-						} else {
-							features = '专注保险保障本质，为您量身定制专属险种。'
-						}
-						_html +=
-							'<div class="pro_list_con clear" data-risk_id="' +
-							proList[i].product_id +
-							'" data-link="/index.php/Index/Ad/productDetail/product_id/' +
-							proList[i].product_id +
-							'/uid/' +
-							uid +
-							'" data-risk_title="' +
-							proList[i].product_name +
-							'" data-risk_cover="' +
-							proList[i].product_thumb_img_url +
-							'" data-features_info="' +
-							features +
-							'">' +
-							'<img src="' +
-							proList[i].product_thumb_img_url +
-							'" alt="产品图">' +
-							'<div class="pro_list_info">' +
-							'<p class="pro_list_title">' +
-							proList[i].product_name +
-							'</p>' +
-							'<p class="pro_list_des">' +
-							features +
-							'</p>' +
-							'</div>' +
-							'</div>'
-					}
-					$('.pro_content_inner').append(_html)
-					if ($('.pro_content_inner').html() != '') {
-						$('.add_pro_btn').removeClass('hidden')
-					} else {
-						$('.add_pro_btn').addClass('hidden')
-					}
-					// 插入产品  为产品添加点击事件
-					insertPro()
-					$('.pro_wrapper .weui-loadmore').hide()
-				}
-			})
-		}
-		// 插入产品
-		function insertPro() {
-			$('.pro_content_inner .pro_list_con').on('click', function(e) {
-				e.stopPropagation()
-				var risk_id = $(this).data('risk_id')
-				var risk_detail_link = $(this).data('link')
-				var risk_cover = $(this).data('risk_cover')
-				var risk_title = $(this).data('risk_title')
-				var risk_features = $(this).data('features_info')
-				var _html = ''
-				_html +=
-					'<div class="art-section-new product-section" style="padding-bottom:46px;">'
-				_html +=
-					'<a href="javascript:void(0);" data-href="' + risk_detail_link + '">'
-				_html += '<div class="product-info">'
-				_html += '<img src="' + risk_cover + '" />'
-				_html += '<h3>' + risk_title + '</h3>'
-				if (risk_features) {
-					_html += '<div class="cont">' + risk_features + '</div>'
-				} else {
-					_html +=
-						'<div class="cont">专注保险保障本质，为您量身定制专属险种。</div>'
-				}
-				_html += '</div>'
-				_html += '<div class="hr scale-half product-brd-line hidden"></div>'
-				_html += '<div class="consult-column hidden">'
-				_html += '<img src="' + avatar_url + '" />'
-				_html += '<i>' + nickname.substring(0, 6) + '</i>'
-				_html += '<span>咨询我>></span>'
-				_html += '</div>'
-				_html += '</a>'
-				_html += '</div>'
-				if (isAddTop) {
-					$('.art-content').prepend(_html)
-				} else {
-					if ($('.cur_edit_con').closest('.art-section').length) {
-						// 旧版之前文章的div
-						$('.cur_edit_con')
-							.closest('.art-section')
-							.addClass('cur_art_section')
-						$('.cur_art_section')
-							.next()
-							.hasClass('art_section_edit')
-							? $('.art_section_edit').after(_html)
-							: $('.cur_art_section').after(_html)
-					} else {
-						$('.art_section_edit').after(_html)
-					}
-					// else if ($('.cur_edit_con').closest('.art-section-new').length) {
-					//   // 新版新加的段落，图片，产品都会是art-section-new的类
-					//   $('.cur_edit_con').closest('.art-section-new').addClass('cur_art_section');
-					//   $('.cur_art_section').next().hasClass('art_section_edit') ? $('.art_section_edit').after(_html) : $('.cur_art_section').after(_html);
-					// } else if ($('.cur_edit_con').closest('._135editor').length) {
-					//   // 这个是135编辑器的类
-					//   $('.cur_edit_con').closest('._135editor').addClass('cur_art_section');
-					//   $('.cur_art_section').next().hasClass('art_section_edit') ? $('.art_section_edit').after(_html) : $('.cur_art_section').after(_html);
-					// } else if ($('.cur_edit_con').closest('.other-section').length) {
-					//   // 其他文章的情况
-					//   $('.cur_edit_con').closest('.other-section').addClass('cur_art_section');
-					//   $('.cur_art_section').next().hasClass('art_section_edit') ? $('.art_section_edit').after(_html) : $('.cur_art_section').after(_html);
-					// }
-				}
-				$.toast('插入成功', 'text')
-				// 重置数据
-				isAddTop = false
-				$('.edit_add_con_wrap').addClass('hidden')
-				// articleEventListener();
-				$.closePopup()
-				// 释放
-				stopBodyScroll(false)
-			})
-		}
 
-		// 滚动到指定位置
-		function scrollToEl(id) {
-			var __total =
-				$('.cur_edit_con').offset().top +
-				$('.cur_edit_con').height() +
-				$('.art_section_edit').height()
-			var __height =
-				$(window).scrollTop() + $(window).height() - $('.footer').height()
-			if (__total < __height) {
-				return
-			}
-			$('html, body').animate(
-				{
-					scrollTop: $(window).scrollTop() + __total - __height + 30
-				},
-				200
-			)
-		}
-		// 禁止body滚动
-		function stopBodyScroll(isFixed) {
-			if (isFixed) {
-				$('body, html').css({
-					overflow: 'hidden'
-				})
-			} else {
-				$('body, html').css({
-					overflow: 'auto'
-				})
-			}
-		}
 		// 监听页面返回
 		// function pushHistory() {
 		//   let state = {
@@ -5085,6 +5117,39 @@ export default {
 		})()
 	},
 	methods: {
+		//获取上传图片
+		afterRead1(file) {
+			this.imgUrl = file.content
+		},
+		afterRead2(file) {
+			console.log(2, file.content)
+			var _html = ''
+			_html +=
+				'<div class="art-section-new"><img src="' + file.content + '"/></div>'
+			$('.art-content').prepend(_html)
+			articleEventListener()
+			$.toast('上传成功', 'text')
+		},
+		afterRead3(file) {
+			var _html = ''
+			_html +=
+				'<div class="art-section-new"><img src="' + file.content + '"/></div>'
+			if ($('.cur_edit_con').closest('.art-section').length) {
+				// 旧版之前文章的div
+				$('.cur_edit_con')
+					.closest('.art-section')
+					.addClass('cur_art_section')
+				$('.cur_art_section')
+					.next()
+					.hasClass('art_section_edit')
+					? $('.art_section_edit').after(_html)
+					: $('.cur_art_section').after(_html)
+			} else {
+				$('.art_section_edit').after(_html)
+			}
+
+			articleEventListener()
+		},
 		//删除
 		deleteEl() {
 			del_num += 1
@@ -5117,6 +5182,7 @@ export default {
 		},
 		// 加图片
 		editAddImg() {
+			console.log('图加图')
 			wx.chooseImage({
 				count: 1,
 				sizeType: ['compressed'],
@@ -5229,6 +5295,25 @@ export default {
 </script>
 
 <style type="text/css">
+::-webkit-scrollbar {
+	width: 12px !important;
+	height: 12px !important;
+}
+::-webkit-scrollbar-thumb:vertical {
+	background-color: rgba(136, 141, 152, 0.5) !important;
+	border-radius: 10px !important;
+	background-clip: content-box !important;
+	border: 2px solid transparent !important;
+}
+::-webkit-scrollbar-thumb:horizontal {
+	background-color: rgba(136, 141, 152, 0.5) !important;
+	border-radius: 10px !important;
+	background-clip: content-box !important;
+	border: 2px solid transparent !important;
+}
+::-webkit-resizer {
+	display: none !important;
+}
 ::-webkit-scrollbar {
 	/*隐藏滚轮*/
 	display: none;
