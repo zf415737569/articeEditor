@@ -2,7 +2,9 @@
 	<div>
 		<div class="edit_notice_wrap hidden">
 			<p class="edit_notice_title">
-				想改哪里 <span class="edit_notice_y">点</span>哪里
+				想改哪里
+				<span class="edit_notice_y">点</span>
+				哪里
 			</p>
 			<img
 				class="edit_notice_img"
@@ -80,14 +82,12 @@
 											aria-label="Style"
 										>
 											<li role="listitem" aria-label="p">
-												<a href="#" data-value="p"
-													><p>Normal</p></a
-												>
+												<a href="#" data-value="p"><p>Normal</p></a>
 											</li>
 											<li role="listitem" aria-label="blockquote">
-												<a href="#" data-value="blockquote"
-													><blockquote>Quote</blockquote></a
-												>
+												<a href="#" data-value="blockquote">
+													<blockquote>Quote</blockquote>
+												</a>
 											</li>
 											<li role="listitem" aria-label="pre">
 												<a href="#" data-value="pre">
@@ -95,34 +95,22 @@
 												</a>
 											</li>
 											<li role="listitem" aria-label="h1">
-												<a href="#" data-value="h1"
-													><h1>Header 1</h1></a
-												>
+												<a href="#" data-value="h1"><h1>Header 1</h1></a>
 											</li>
 											<li role="listitem" aria-label="h2">
-												<a href="#" data-value="h2"
-													><h2>Header 2</h2></a
-												>
+												<a href="#" data-value="h2"><h2>Header 2</h2></a>
 											</li>
 											<li role="listitem" aria-label="h3">
-												<a href="#" data-value="h3"
-													><h3>Header 3</h3></a
-												>
+												<a href="#" data-value="h3"><h3>Header 3</h3></a>
 											</li>
 											<li role="listitem" aria-label="h4">
-												<a href="#" data-value="h4"
-													><h4>Header 4</h4></a
-												>
+												<a href="#" data-value="h4"><h4>Header 4</h4></a>
 											</li>
 											<li role="listitem" aria-label="h5">
-												<a href="#" data-value="h5"
-													><h5>Header 5</h5></a
-												>
+												<a href="#" data-value="h5"><h5>Header 5</h5></a>
 											</li>
 											<li role="listitem" aria-label="h6">
-												<a href="#" data-value="h6"
-													><h6>Header 6</h6></a
-												>
+												<a href="#" data-value="h6"><h6>Header 6</h6></a>
 											</li>
 										</ul>
 									</div>
@@ -137,8 +125,9 @@
 										aria-label="Bold (CTRL+B)"
 										data-original-title="Bold (CTRL+B)"
 									>
-										<i class="note-icon-bold"></i></button
-									><button
+										<i class="note-icon-bold"></i>
+									</button>
+									<button
 										type="button"
 										class="note-btn btn btn-default btn-sm note-btn-underline"
 										role="button"
@@ -147,8 +136,9 @@
 										aria-label="Underline (CTRL+U)"
 										data-original-title="Underline (CTRL+U)"
 									>
-										<i class="note-icon-underline"></i></button
-									><button
+										<i class="note-icon-underline"></i>
+									</button>
+									<button
 										type="button"
 										class="note-btn btn btn-default btn-sm"
 										role="button"
@@ -172,11 +162,9 @@
 											aria-label="Font Family"
 											data-original-title="Font Family"
 										>
-											<span
-												class="note-current-fontname"
-												style="font-family: 微软雅黑;"
-												>微软雅黑</span
-											>
+											<span class="note-current-fontname" style="font-family: 微软雅黑;">
+												微软雅黑
+											</span>
 											<span class="note-icon-caret"></span>
 										</button>
 										<ul
@@ -185,128 +173,106 @@
 											aria-label="Font Family"
 										>
 											<li role="listitem" aria-label="Arial">
-												<a href="#" data-value="Arial"
-													><i class="note-icon-menu-check"></i>
-													<span style="font-family: 'Arial';"
-														>Arial</span
-													></a
-												>
+												<a href="#" data-value="Arial">
+													<i class="note-icon-menu-check"></i>
+													<span style="font-family: 'Arial';">Arial</span>
+												</a>
 											</li>
 											<li role="listitem" aria-label="Arial Black">
-												<a href="#" data-value="Arial Black"
-													><i class="note-icon-menu-check"></i>
+												<a href="#" data-value="Arial Black">
+													<i class="note-icon-menu-check"></i>
 													<span
 														style="
 															font-family: 'Arial Black';
 														"
-														>Arial Black</span
-													></a
-												>
+													>
+														Arial Black
+													</span>
+												</a>
 											</li>
-											<li
-												role="listitem"
-												aria-label="Comic Sans MS"
-											>
-												<a href="#" data-value="Comic Sans MS"
-													><i class="note-icon-menu-check"></i>
+											<li role="listitem" aria-label="Comic Sans MS">
+												<a href="#" data-value="Comic Sans MS">
+													<i class="note-icon-menu-check"></i>
 													<span
 														style="
 															font-family: 'Comic Sans MS';
 														"
-														>Comic Sans MS</span
-													></a
-												>
+													>
+														Comic Sans MS
+													</span>
+												</a>
 											</li>
 											<li role="listitem" aria-label="Courier New">
-												<a href="#" data-value="Courier New"
-													><i class="note-icon-menu-check"></i>
+												<a href="#" data-value="Courier New">
+													<i class="note-icon-menu-check"></i>
 													<span
 														style="
 															font-family: 'Courier New';
 														"
-														>Courier New</span
-													></a
-												>
+													>
+														Courier New
+													</span>
+												</a>
 											</li>
 											<li role="listitem" aria-label="Helvetica">
-												<a href="#" data-value="Helvetica"
-													><i class="note-icon-menu-check"></i>
-													<span
-														style="font-family: 'Helvetica';"
-														>Helvetica</span
-													></a
-												>
+												<a href="#" data-value="Helvetica">
+													<i class="note-icon-menu-check"></i>
+													<span style="font-family: 'Helvetica';">Helvetica</span>
+												</a>
 											</li>
 											<li role="listitem" aria-label="Impact">
-												<a href="#" data-value="Impact"
-													><i class="note-icon-menu-check"></i>
-													<span style="font-family: 'Impact';"
-														>Impact</span
-													></a
-												>
+												<a href="#" data-value="Impact">
+													<i class="note-icon-menu-check"></i>
+													<span style="font-family: 'Impact';">Impact</span>
+												</a>
 											</li>
 											<li role="listitem" aria-label="Tahoma">
-												<a href="#" data-value="Tahoma"
-													><i class="note-icon-menu-check"></i>
-													<span style="font-family: 'Tahoma';"
-														>Tahoma</span
-													></a
-												>
+												<a href="#" data-value="Tahoma">
+													<i class="note-icon-menu-check"></i>
+													<span style="font-family: 'Tahoma';">Tahoma</span>
+												</a>
 											</li>
-											<li
-												role="listitem"
-												aria-label="Times New Roman"
-											>
-												<a href="#" data-value="Times New Roman"
-													><i class="note-icon-menu-check"></i>
+											<li role="listitem" aria-label="Times New Roman">
+												<a href="#" data-value="Times New Roman">
+													<i class="note-icon-menu-check"></i>
 													<span
 														style="
 															font-family: 'Times New Roman';
 														"
-														>Times New Roman</span
-													></a
-												>
+													>
+														Times New Roman
+													</span>
+												</a>
 											</li>
 											<li role="listitem" aria-label="Verdana">
-												<a href="#" data-value="Verdana"
-													><i class="note-icon-menu-check"></i>
-													<span style="font-family: 'Verdana';"
-														>Verdana</span
-													></a
-												>
+												<a href="#" data-value="Verdana">
+													<i class="note-icon-menu-check"></i>
+													<span style="font-family: 'Verdana';">Verdana</span>
+												</a>
 											</li>
 											<li role="listitem" aria-label="微软雅黑">
-												<a
-													href="#"
-													data-value="微软雅黑"
-													class="checked"
-													><i class="note-icon-menu-check"></i>
-													<span style="font-family: '微软雅黑';"
-														>微软雅黑</span
-													></a
-												>
+												<a href="#" data-value="微软雅黑" class="checked">
+													<i class="note-icon-menu-check"></i>
+													<span style="font-family: '微软雅黑';">微软雅黑</span>
+												</a>
 											</li>
-											<li
-												role="listitem"
-												aria-label="Microsoft Yahei"
-											>
-												<a href="#" data-value="Microsoft Yahei"
-													><i class="note-icon-menu-check"></i>
+											<li role="listitem" aria-label="Microsoft Yahei">
+												<a href="#" data-value="Microsoft Yahei">
+													<i class="note-icon-menu-check"></i>
 													<span
 														style="
 															font-family: 'Microsoft Yahei';
 														"
-														>Microsoft Yahei</span
-													></a
-												>
+													>
+														Microsoft Yahei
+													</span>
+												</a>
 											</li>
 										</ul>
 									</div>
 								</div>
 								<div class="note-btn-group btn-group note-color">
-									<div
-										class="note-btn-group btn-group note-color note-color-all"
-									>
+									<div class="note-btn-group btn-group note-color note-color-all">
 										<button
 											type="button"
 											class="note-btn btn btn-default btn-sm note-current-color-button"
@@ -322,8 +288,9 @@
 												style="
 													background-color: rgb(255, 255, 0);
 												"
-											></i></button
-										><button
+											></i>
+										</button>
+										<button
 											type="button"
 											class="note-btn btn btn-default btn-sm dropdown-toggle"
 											role="button"
@@ -350,10 +317,7 @@
 														Transparent
 													</button>
 												</div>
-												<div
-													class="note-holder"
-													data-event="backColor"
-												>
+												<div class="note-holder" data-event="backColor">
 													<div class="note-color-palette">
 														<div class="note-color-row">
 															<button
@@ -369,8 +333,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Black"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -383,8 +347,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Tundora"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -397,8 +361,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Dove Gray"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -411,8 +375,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Star Dust"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -425,8 +389,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Pale Slate"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -439,8 +403,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Gallery"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -453,8 +417,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Alabaster"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -483,8 +447,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Red"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -497,8 +461,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Orange Peel"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -511,8 +475,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Yellow"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -525,8 +489,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Green"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -539,8 +503,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Cyan"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -553,8 +517,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Blue"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -567,8 +531,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Electric Violet"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -597,8 +561,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Azalea"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -611,8 +575,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Karry"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -625,8 +589,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Egg White"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -639,8 +603,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Zanah"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -653,8 +617,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Botticelli"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -667,8 +631,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Tropical Blue"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -681,8 +645,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Mischka"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -711,8 +675,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Tonys Pink"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -725,8 +689,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Peach Orange"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -739,8 +703,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Cream Brulee"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -753,8 +717,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Sprout"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -767,8 +731,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Casper"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -781,8 +745,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Perano"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -795,8 +759,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Cold Purple"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -825,8 +789,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Mandy"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -839,8 +803,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Rajah"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -853,8 +817,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Dandelion"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -867,8 +831,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Olivine"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -881,8 +845,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Gulf Stream"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -895,8 +859,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Viking"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -909,8 +873,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Blue Marguerite"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -939,8 +903,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Guardsman Red"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -953,8 +917,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Fire Bush"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -967,8 +931,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Golden Dream"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -981,8 +945,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Chelsea Cucumber"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -995,8 +959,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Smalt Blue"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1009,8 +973,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Boston Blue"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1023,8 +987,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Butterfly Bush"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1053,8 +1017,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Sangria"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1067,8 +1031,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Mai Tai"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1081,8 +1045,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Buddha Gold"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1095,8 +1059,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Forest Green"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1109,8 +1073,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Eden"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1123,8 +1087,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Venice Blue"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1137,8 +1101,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Meteorite"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1167,8 +1131,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Rosewood"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1181,8 +1145,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Cinnamon"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1195,8 +1159,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Olive"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1209,8 +1173,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Parsley"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1223,8 +1187,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Tiber"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1237,8 +1201,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Midnight Blue"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1251,8 +1215,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Valentino"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1306,8 +1270,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="#FFFFFF"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1320,8 +1284,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="#FFFFFF"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1334,8 +1298,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="#FFFFFF"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1348,8 +1312,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="#FFFFFF"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1362,8 +1326,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="#FFFFFF"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1376,8 +1340,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="#FFFFFF"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1390,8 +1354,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="#FFFFFF"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1423,10 +1387,7 @@
 														Reset to default
 													</button>
 												</div>
-												<div
-													class="note-holder"
-													data-event="foreColor"
-												>
+												<div class="note-holder" data-event="foreColor">
 													<div class="note-color-palette">
 														<div class="note-color-row">
 															<button
@@ -1442,8 +1403,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Black"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1456,8 +1417,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Tundora"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1470,8 +1431,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Dove Gray"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1484,8 +1445,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Star Dust"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1498,8 +1459,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Pale Slate"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1512,8 +1473,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Gallery"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1526,8 +1487,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Alabaster"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1556,8 +1517,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Red"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1570,8 +1531,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Orange Peel"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1584,8 +1545,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Yellow"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1598,8 +1559,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Green"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1612,8 +1573,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Cyan"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1626,8 +1587,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Blue"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1640,8 +1601,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Electric Violet"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1670,8 +1631,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Azalea"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1684,8 +1645,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Karry"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1698,8 +1659,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Egg White"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1712,8 +1673,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Zanah"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1726,8 +1687,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Botticelli"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1740,8 +1701,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Tropical Blue"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1754,8 +1715,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Mischka"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1784,8 +1745,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Tonys Pink"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1798,8 +1759,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Peach Orange"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1812,8 +1773,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Cream Brulee"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1826,8 +1787,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Sprout"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1840,8 +1801,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Casper"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1854,8 +1815,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Perano"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1868,8 +1829,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Cold Purple"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1898,8 +1859,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Mandy"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1912,8 +1873,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Rajah"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1926,8 +1887,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Dandelion"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1940,8 +1901,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Olivine"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1954,8 +1915,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Gulf Stream"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1968,8 +1929,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Viking"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -1982,8 +1943,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Blue Marguerite"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2012,8 +1973,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Guardsman Red"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2026,8 +1987,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Fire Bush"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2040,8 +2001,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Golden Dream"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2054,8 +2015,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Chelsea Cucumber"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2068,8 +2029,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Smalt Blue"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2082,8 +2043,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Boston Blue"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2096,8 +2057,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Butterfly Bush"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2126,8 +2087,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Sangria"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2140,8 +2101,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Mai Tai"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2154,8 +2115,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Buddha Gold"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2168,8 +2129,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Forest Green"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2182,8 +2143,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Eden"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2196,8 +2157,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Venice Blue"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2210,8 +2171,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Meteorite"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2240,8 +2201,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Rosewood"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2254,8 +2215,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Cinnamon"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2268,8 +2229,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Olive"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2282,8 +2243,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Parsley"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2296,8 +2257,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Tiber"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2310,8 +2271,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Midnight Blue"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2324,8 +2285,8 @@
 																data-toggle="button"
 																tabindex="-1"
 																data-original-title="Valentino"
-															></button
-															><button
+															></button>
+															<button
 																type="button"
 																class="note-color-btn"
 																style="
@@ -2378,8 +2339,8 @@
 																	data-toggle="button"
 																	tabindex="-1"
 																	data-original-title="#FFFFFF"
-																></button
-																><button
+																></button>
+																<button
 																	type="button"
 																	class="note-color-btn"
 																	style="
@@ -2392,8 +2353,8 @@
 																	data-toggle="button"
 																	tabindex="-1"
 																	data-original-title="#FFFFFF"
-																></button
-																><button
+																></button>
+																<button
 																	type="button"
 																	class="note-color-btn"
 																	style="
@@ -2406,8 +2367,8 @@
 																	data-toggle="button"
 																	tabindex="-1"
 																	data-original-title="#FFFFFF"
-																></button
-																><button
+																></button>
+																<button
 																	type="button"
 																	class="note-color-btn"
 																	style="
@@ -2420,8 +2381,8 @@
 																	data-toggle="button"
 																	tabindex="-1"
 																	data-original-title="#FFFFFF"
-																></button
-																><button
+																></button>
+																<button
 																	type="button"
 																	class="note-color-btn"
 																	style="
@@ -2434,8 +2395,8 @@
 																	data-toggle="button"
 																	tabindex="-1"
 																	data-original-title="#FFFFFF"
-																></button
-																><button
+																></button>
+																<button
 																	type="button"
 																	class="note-color-btn"
 																	style="
@@ -2448,8 +2409,8 @@
 																	data-toggle="button"
 																	tabindex="-1"
 																	data-original-title="#FFFFFF"
-																></button
-																><button
+																></button>
+																<button
 																	type="button"
 																	class="note-color-btn"
 																	style="
@@ -2462,8 +2423,8 @@
 																	data-toggle="button"
 																	tabindex="-1"
 																	data-original-title="#FFFFFF"
-																></button
-																><button
+																></button>
+																<button
 																	type="button"
 																	class="note-color-btn"
 																	style="
@@ -2495,8 +2456,9 @@
 										aria-label="Unordered list (CTRL+SHIFT+NUM7)"
 										data-original-title="Unordered list (CTRL+SHIFT+NUM7)"
 									>
-										<i class="note-icon-unorderedlist"></i></button
-									><button
+										<i class="note-icon-unorderedlist"></i>
+									</button>
+									<button
 										type="button"
 										class="note-btn btn btn-default btn-sm"
 										role="button"
@@ -2522,9 +2484,7 @@
 											<span class="note-icon-caret"></span>
 										</button>
 										<ul class="dropdown-menu" role="list">
-											<div
-												class="note-btn-group btn-group note-align"
-											>
+											<div class="note-btn-group btn-group note-align">
 												<button
 													type="button"
 													class="note-btn btn btn-default btn-sm"
@@ -2534,10 +2494,9 @@
 													aria-label="Align left (CTRL+SHIFT+L)"
 													data-original-title="Align left (CTRL+SHIFT+L)"
 												>
-													<i
-														class="note-icon-align-left"
-													></i></button
-												><button
+													<i class="note-icon-align-left"></i>
+												</button>
+												<button
 													type="button"
 													class="note-btn btn btn-default btn-sm"
 													role="button"
@@ -2546,10 +2505,9 @@
 													aria-label="Align center (CTRL+SHIFT+E)"
 													data-original-title="Align center (CTRL+SHIFT+E)"
 												>
-													<i
-														class="note-icon-align-center"
-													></i></button
-												><button
+													<i class="note-icon-align-center"></i>
+												</button>
+												<button
 													type="button"
 													class="note-btn btn btn-default btn-sm"
 													role="button"
@@ -2558,10 +2516,9 @@
 													aria-label="Align right (CTRL+SHIFT+R)"
 													data-original-title="Align right (CTRL+SHIFT+R)"
 												>
-													<i
-														class="note-icon-align-right"
-													></i></button
-												><button
+													<i class="note-icon-align-right"></i>
+												</button>
+												<button
 													type="button"
 													class="note-btn btn btn-default btn-sm"
 													role="button"
@@ -2570,14 +2527,10 @@
 													aria-label="Justify full (CTRL+SHIFT+J)"
 													data-original-title="Justify full (CTRL+SHIFT+J)"
 												>
-													<i
-														class="note-icon-align-justify"
-													></i>
+													<i class="note-icon-align-justify"></i>
 												</button>
 											</div>
-											<div
-												class="note-btn-group btn-group note-list"
-											>
+											<div class="note-btn-group btn-group note-list">
 												<button
 													type="button"
 													class="note-btn btn btn-default btn-sm"
@@ -2587,10 +2540,9 @@
 													aria-label="Outdent (CTRL+[)"
 													data-original-title="Outdent (CTRL+[)"
 												>
-													<i
-														class="note-icon-align-outdent"
-													></i></button
-												><button
+													<i class="note-icon-align-outdent"></i>
+												</button>
+												<button
 													type="button"
 													class="note-btn btn btn-default btn-sm"
 													role="button"
@@ -2620,11 +2572,7 @@
 											<i class="note-icon-table"></i>
 											<span class="note-icon-caret"></span>
 										</button>
-										<ul
-											class="dropdown-menu note-table"
-											role="list"
-											aria-label="Table"
-										>
+										<ul class="dropdown-menu note-table" role="list" aria-label="Table">
 											<div class="note-dimension-picker">
 												<div
 													class="note-dimension-picker-mousecatcher"
@@ -2632,12 +2580,8 @@
 													data-value="1x1"
 													style="width: 10em; height: 10em;"
 												></div>
-												<div
-													class="note-dimension-picker-highlighted"
-												></div>
-												<div
-													class="note-dimension-picker-unhighlighted"
-												></div>
+												<div class="note-dimension-picker-highlighted"></div>
+												<div class="note-dimension-picker-unhighlighted"></div>
 											</div>
 											<div class="note-dimension-display">
 												1 x 1
@@ -2655,8 +2599,9 @@
 										aria-label="Link (CTRL+K)"
 										data-original-title="Link (CTRL+K)"
 									>
-										<i class="note-icon-link"></i></button
-									><button
+										<i class="note-icon-link"></i>
+									</button>
+									<button
 										type="button"
 										class="note-btn btn btn-default btn-sm"
 										role="button"
@@ -2665,8 +2610,9 @@
 										aria-label="Picture"
 										data-original-title="Picture"
 									>
-										<i class="note-icon-picture"></i></button
-									><button
+										<i class="note-icon-picture"></i>
+									</button>
+									<button
 										type="button"
 										class="note-btn btn btn-default btn-sm"
 										role="button"
@@ -2688,8 +2634,9 @@
 										aria-label="Full Screen"
 										data-original-title="Full Screen"
 									>
-										<i class="note-icon-arrows-alt"></i></button
-									><button
+										<i class="note-icon-arrows-alt"></i>
+									</button>
+									<button
 										type="button"
 										class="note-btn btn btn-default btn-sm btn-codeview"
 										role="button"
@@ -2698,8 +2645,9 @@
 										aria-label="Code View"
 										data-original-title="Code View"
 									>
-										<i class="note-icon-code"></i></button
-									><button
+										<i class="note-icon-code"></i>
+									</button>
+									<button
 										type="button"
 										class="note-btn btn btn-default btn-sm"
 										role="button"
@@ -2750,10 +2698,7 @@
 									style="height: 180px;"
 								></div>
 							</div> -->
-							<output
-								class="note-status-output"
-								aria-live="polite"
-							></output>
+							<output class="note-status-output" aria-live="polite"></output>
 							<div class="note-statusbar" role="status">
 								<div
 									class="note-resizebar"
@@ -2790,34 +2735,32 @@
 										</div>
 										<div class="modal-body">
 											<div class="form-group note-form-group">
-												<label class="note-form-label"
-													>Text to display</label
-												><input
+												<label class="note-form-label">Text to display</label>
+												<input
 													class="note-link-text form-control note-form-control note-input"
 													type="text"
 												/>
 											</div>
 											<div class="form-group note-form-group">
-												<label class="note-form-label"
-													>To what URL should this link
-													go?</label
-												><input
+												<label class="note-form-label">
+													To what URL should this link go?
+												</label>
+												<input
 													class="note-link-url form-control note-form-control note-input"
 													type="text"
 													value="http://"
 												/>
 											</div>
-											<div
-												class="checkbox sn-checkbox-open-in-new-window"
-											>
+											<div class="checkbox sn-checkbox-open-in-new-window">
 												<label>
 													<input
 														role="checkbox"
 														type="checkbox"
 														checked=""
 														aria-checked="true"
-													/>Open in new window</label
-												>
+													/>
+													Open in new window
+												</label>
 											</div>
 										</div>
 										<div class="modal-footer">
@@ -2858,9 +2801,8 @@
 											<div
 												class="form-group note-form-group note-group-select-from-files"
 											>
-												<label class="note-form-label"
-													>Select from files</label
-												><input
+												<label class="note-form-label">Select from files</label>
+												<input
 													class="note-image-input note-form-control note-input"
 													type="file"
 													name="files"
@@ -2872,9 +2814,8 @@
 												class="form-group note-group-image-url"
 												style="overflow: auto;"
 											>
-												<label class="note-form-label"
-													>Image URL</label
-												><input
+												<label class="note-form-label">Image URL</label>
+												<input
 													class="note-image-url form-control note-form-control note-input col-md-12"
 													type="text"
 												/>
@@ -2915,16 +2856,14 @@
 											<h4 class="modal-title">Insert Video</h4>
 										</div>
 										<div class="modal-body">
-											<div
-												class="form-group note-form-group row-fluid"
-											>
-												<label class="note-form-label"
-													>Video URL
-													<small class="text-muted"
-														>(YouTube, Vimeo, Vine, Instagram,
-														DailyMotion or Youku)</small
-													></label
-												><input
+											<div class="form-group note-form-group row-fluid">
+												<label class="note-form-label">
+													Video URL
+													<small class="text-muted">
+														(YouTube, Vimeo, Vine, Instagram, DailyMotion or Youku)
+													</small>
+												</label>
+												<input
 													class="note-video-url form-control note-form-control note-input"
 													type="text"
 												/>
@@ -2964,180 +2903,162 @@
 											</button>
 											<h4 class="modal-title">Help</h4>
 										</div>
-										<div
-											class="modal-body"
-											style="max-height: 300px; overflow: scroll;"
-										>
+										<div class="modal-body" style="max-height: 300px; overflow: scroll;">
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>ENTER</kbd></label
-											><span>Insert Paragraph</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>ENTER</kbd>
+											</label>
+											<span>Insert Paragraph</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+Z</kbd></label
-											><span>Undoes the last command</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+Z</kbd>
+											</label>
+											<span>Undoes the last command</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+Y</kbd></label
-											><span>Redoes the last command</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+Y</kbd>
+											</label>
+											<span>Redoes the last command</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>TAB</kbd></label
-											><span>Tab</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>TAB</kbd>
+											</label>
+											<span>Tab</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>SHIFT+TAB</kbd></label
-											><span>Untab</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>SHIFT+TAB</kbd>
+											</label>
+											<span>Untab</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+B</kbd></label
-											><span>Set a bold style</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+B</kbd>
+											</label>
+											<span>Set a bold style</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+I</kbd></label
-											><span>Set a italic style</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+I</kbd>
+											</label>
+											<span>Set a italic style</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+U</kbd></label
-											><span>Set a underline style</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+U</kbd>
+											</label>
+											<span>Set a underline style</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+SHIFT+S</kbd></label
-											><span>Set a strikethrough style</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+SHIFT+S</kbd>
+											</label>
+											<span>Set a strikethrough style</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+BACKSLASH</kbd></label
-											><span>Clean a style</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+BACKSLASH</kbd>
+											</label>
+											<span>Clean a style</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+SHIFT+L</kbd></label
-											><span>Set left align</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+SHIFT+L</kbd>
+											</label>
+											<span>Set left align</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+SHIFT+E</kbd></label
-											><span>Set center align</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+SHIFT+E</kbd>
+											</label>
+											<span>Set center align</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+SHIFT+R</kbd></label
-											><span>Set right align</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+SHIFT+R</kbd>
+											</label>
+											<span>Set right align</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+SHIFT+J</kbd></label
-											><span>Set full align</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+SHIFT+J</kbd>
+											</label>
+											<span>Set full align</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+SHIFT+NUM7</kbd></label
-											><span>Toggle unordered list</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+SHIFT+NUM7</kbd>
+											</label>
+											<span>Toggle unordered list</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+SHIFT+NUM8</kbd></label
-											><span>Toggle ordered list</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+SHIFT+NUM8</kbd>
+											</label>
+											<span>Toggle ordered list</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+LEFTBRACKET</kbd></label
-											><span>Outdent on current paragraph</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+LEFTBRACKET</kbd>
+											</label>
+											<span>Outdent on current paragraph</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+RIGHTBRACKET</kbd></label
-											><span>Indent on current paragraph</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+RIGHTBRACKET</kbd>
+											</label>
+											<span>Indent on current paragraph</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+NUM0</kbd></label
-											><span
-												>Change current block's format as a
-												paragraph(P tag)</span
-											>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+NUM0</kbd>
+											</label>
+											<span>Change current block's format as a paragraph(P tag)</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+NUM1</kbd></label
-											><span
-												>Change current block's format as H1</span
-											>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+NUM1</kbd>
+											</label>
+											<span>Change current block's format as H1</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+NUM2</kbd></label
-											><span
-												>Change current block's format as H2</span
-											>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+NUM2</kbd>
+											</label>
+											<span>Change current block's format as H2</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+NUM3</kbd></label
-											><span
-												>Change current block's format as H3</span
-											>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+NUM3</kbd>
+											</label>
+											<span>Change current block's format as H3</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+NUM4</kbd></label
-											><span
-												>Change current block's format as H4</span
-											>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+NUM4</kbd>
+											</label>
+											<span>Change current block's format as H4</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+NUM5</kbd></label
-											><span
-												>Change current block's format as H5</span
-											>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+NUM5</kbd>
+											</label>
+											<span>Change current block's format as H5</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+NUM6</kbd></label
-											><span
-												>Change current block's format as H6</span
-											>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+NUM6</kbd>
+											</label>
+											<span>Change current block's format as H6</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+ENTER</kbd></label
-											><span>Insert horizontal rule</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+ENTER</kbd>
+											</label>
+											<span>Insert horizontal rule</span>
 											<div class="help-list-item"></div>
-											<label
-												style="width: 180px; margin-right: 10px;"
-												><kbd>CTRL+K</kbd></label
-											><span>Show Link Dialog</span>
+											<label style="width: 180px; margin-right: 10px;">
+												<kbd>CTRL+K</kbd>
+											</label>
+											<span>Show Link Dialog</span>
 										</div>
 										<div class="modal-footer">
 											<p class="text-center">
-												<a
-													href="http://summernote.org/"
-													target="_blank"
-													>Summernote 0.8.11</a
-												>
+												<a href="http://summernote.org/" target="_blank">
+													Summernote 0.8.11
+												</a>
 												Â·
 												<a
 													href="https://github.com/summernote/summernote"
 													target="_blank"
-													>Project</a
 												>
+													Project
+												</a>
 												Â·
 												<a
 													href="https://github.com/summernote/summernote/issues"
 													target="_blank"
-													>Issues</a
 												>
+													Issues
+												</a>
 											</p>
 										</div>
 									</div>
@@ -3235,10 +3156,7 @@
 						</div>
 						<van-uploader :after-read="afterRead2" :max-count="1">
 							<div class="edit_btn_item_t">
-								<div
-									class="edit_btn_img_icon_t"
-									@onclick="addTopImg"
-								></div>
+								<div class="edit_btn_img_icon_t" @onclick="addTopImg"></div>
 								<span class="edit_btn_txt">图片</span>
 							</div>
 						</van-uploader>
@@ -3247,9 +3165,7 @@
 			</div>
 			<!--文章内容-->
 			<!--底部按钮-->
-			<!-- <div class="art-content">
-				<span>水电费水电费是的舒舒服服</span>
-			</div> -->
+			<!-- <div class="art-content"></div> -->
 			<div class="art-content">
 				<h2
 					style="
@@ -3283,8 +3199,10 @@
 								color: rgb(136, 136, 136);
 							"
 							class="other-section"
-							>点击“</span
-						><span
+						>
+							点击“
+						</span>
+						<span
 							style="
 								color: rgb(0, 82, 255);
 								font-weight: bolder;
@@ -3292,8 +3210,10 @@
 								font-size: 12px;
 							"
 							class="other-section"
-							>开发者技术前线</span
-						><span
+						>
+							开发者技术前线
+						</span>
+						<span
 							mpa-from-tpl="t"
 							style="
 								font-weight: bolder;
@@ -3302,8 +3222,9 @@
 								color: rgb(136, 136, 136);
 							"
 							class="other-section"
-							>”，选择“星标🔝”</span
 						>
+							”，选择“星标🔝”
+						</span>
 					</p>
 					<section
 						style="
@@ -3323,8 +3244,9 @@
 								color: rgb(136, 136, 136);
 							"
 							class="other-section"
-							>在看|星标|留言,&nbsp; 真爱</span
 						>
+							在看|星标|留言,&nbsp; 真爱
+						</span>
 					</section>
 				</h2>
 				<section
@@ -3392,9 +3314,10 @@
 					"
 					class="other-section"
 				>
-					<span style="font-size: 14px; color: rgb(136, 136, 136);"
-						>开发者技术前线 可可整理<br
-					/></span>
+					<span style="font-size: 14px; color: rgb(136, 136, 136);">
+						开发者技术前线 可可整理
+						<br />
+					</span>
 				</section>
 				<section
 					style="
@@ -3431,46 +3354,10 @@
 							white-space: pre-line;
 							background-color: rgb(255, 255, 255);
 						"
-						>7月15日，有报道称，近期，中科院合肥物质科学研究院下属的核能安全技术研究所（以下简称“核所”）多名科研人员集体出走，其中大多数是博士毕业，并拥有事业编制。这在中科院系统内引起广泛关注<br
-					/></span>
-				</section>
-				<section
-					style="
-						font-size: 16px;
-						line-height: 24px;
-						font-family: arial;
-						white-space: normal;
-						background-color: rgb(255, 255, 255);
-						margin-left: 16px;
-						margin-right: 16px;
-					"
-					class="other-section"
-				>
-					<br />
-				</section>
-				<section
-					style="
-						font-size: 16px;
-						line-height: 24px;
-						font-family: arial;
-						white-space: normal;
-						background-color: rgb(255, 255, 255);
-						margin-left: 16px;
-						margin-right: 16px;
-					"
-					class="other-section"
-				>
-					<span
-						style="
-							color: rgb(74, 74, 74);
-							font-family: Avenir, -apple-system-font, 微软雅黑, sans-serif;
-							font-size: 16px;
-							letter-spacing: 0.544px;
-							white-space: pre-line;
-							background-color: rgb(255, 255, 255);
-						"
-						>据称，集体辞职事件的导火索，是院方强制为核所更换保安，核所科研人员认为自身权益被侵犯。</span
 					>
+						7月15日，有报道称，近期，中科院合肥物质科学研究院下属的核能安全技术研究所（以下简称“核所”）多名科研人员集体出走，其中大多数是博士毕业，并拥有事业编制。这在中科院系统内引起广泛关注
+						<br />
+					</span>
 				</section>
 				<section
 					style="
@@ -3507,8 +3394,48 @@
 							white-space: pre-line;
 							background-color: rgb(255, 255, 255);
 						"
-						>近日根据有关消息显示，位于合肥的中科院物质科学研究所有90名科研人员辞职，根据报道可能与科研人员工资有关。具体原因目前仍然在调查跟进中。</span
 					>
+						据称，集体辞职事件的导火索，是院方强制为核所更换保安，核所科研人员认为自身权益被侵犯。
+					</span>
+				</section>
+				<section
+					style="
+						font-size: 16px;
+						line-height: 24px;
+						font-family: arial;
+						white-space: normal;
+						background-color: rgb(255, 255, 255);
+						margin-left: 16px;
+						margin-right: 16px;
+					"
+					class="other-section"
+				>
+					<br />
+				</section>
+				<section
+					style="
+						font-size: 16px;
+						line-height: 24px;
+						font-family: arial;
+						white-space: normal;
+						background-color: rgb(255, 255, 255);
+						margin-left: 16px;
+						margin-right: 16px;
+					"
+					class="other-section"
+				>
+					<span
+						style="
+							color: rgb(74, 74, 74);
+							font-family: Avenir, -apple-system-font, 微软雅黑, sans-serif;
+							font-size: 16px;
+							letter-spacing: 0.544px;
+							white-space: pre-line;
+							background-color: rgb(255, 255, 255);
+						"
+					>
+						近日根据有关消息显示，位于合肥的中科院物质科学研究所有90名科研人员辞职，根据报道可能与科研人员工资有关。具体原因目前仍然在调查跟进中。
+					</span>
 				</section>
 				<p
 					style="
@@ -3545,8 +3472,10 @@
 							white-space: pre-line;
 							background-color: rgb(255, 255, 255);
 						"
-						>来自于sogo百科关于该研究所的具体介绍：中国科学院合肥物质科学研究院应用技术研究所，聚焦相关应用技术领域的核心技术，通过集中合肥研究院相关优势资源、聚集优秀人才队伍，在先进材料技术、智能控制技术、光电子技术、新能源技术、生物技术等应用技术方向开展技术攻关，形成具有重要创新价值的产业适用技术；构筑高水平技术创新人才培养基地；探索以市场需求为导向的科研体制和机制。</span
-					><span
+					>
+						来自于sogo百科关于该研究所的具体介绍：中国科学院合肥物质科学研究院应用技术研究所，聚焦相关应用技术领域的核心技术，通过集中合肥研究院相关优势资源、聚集优秀人才队伍，在先进材料技术、智能控制技术、光电子技术、新能源技术、生物技术等应用技术方向开展技术攻关，形成具有重要创新价值的产业适用技术；构筑高水平技术创新人才培养基地；探索以市场需求为导向的科研体制和机制。
+					</span>
+					<span
 						style="
 							text-align: center;
 							font-family: mp-quote, -apple-system-font, BlinkMacSystemFont,
@@ -3579,8 +3508,9 @@
 							white-space: pre-line;
 							background-color: rgb(255, 255, 255);
 						"
-						>从介绍中我们可以看出这个研究所聚焦的是高科技高水平的先进技术。究竟为何导致90多名博士学位的科研人才集体离职呢？作为考研行业工作者其实最不想看见的就是这些，科研事业是我们每一个受过高等教育的人所向往的工作，也是我们科教兴国的根本。</span
 					>
+						从介绍中我们可以看出这个研究所聚焦的是高科技高水平的先进技术。究竟为何导致90多名博士学位的科研人才集体离职呢？作为考研行业工作者其实最不想看见的就是这些，科研事业是我们每一个受过高等教育的人所向往的工作，也是我们科教兴国的根本。
+					</span>
 				</section>
 				<p class="other-section">
 					<img
@@ -3619,8 +3549,9 @@
 							white-space: pre-line;
 							background-color: rgb(255, 255, 255);
 						"
-						>在国家大力支持科研事业的关键时刻，为何出现如此大规模高学历人才的辞职？这背后的情况值得我们去研究调查，在改革的同时难道不应该考虑到和保护科研人员的利益吗？我们不仅要培养人才，也要留得住人才才可以！</span
 					>
+						在国家大力支持科研事业的关键时刻，为何出现如此大规模高学历人才的辞职？这背后的情况值得我们去研究调查，在改革的同时难道不应该考虑到和保护科研人员的利益吗？我们不仅要培养人才，也要留得住人才才可以！
+					</span>
 				</section>
 				<p class="other-section">
 					<img
@@ -3706,7 +3637,8 @@
 					"
 					class="other-section"
 				>
-					7月16日，有媒体报道称，中国科学院合肥物质科学研究院90多名科研人员离职。报道引用一名内部人士的表述称，离职人员集中于合肥研究院核能安全技术研究所，其中大多数是博士毕业，并拥有事业编制。时间均在今年年内，离职原因似与待遇并无直接关联。<br />
+					7月16日，有媒体报道称，中国科学院合肥物质科学研究院90多名科研人员离职。报道引用一名内部人士的表述称，离职人员集中于合肥研究院核能安全技术研究所，其中大多数是博士毕业，并拥有事业编制。时间均在今年年内，离职原因似与待遇并无直接关联。
+					<br />
 				</section>
 				<section
 					style="
@@ -3749,9 +3681,9 @@
 					"
 					class="other-section"
 				>
-					<span style="color: rgb(0, 128, 255);"
-						><strong>研究所回应集体离职 被挖走的！</strong></span
-					>
+					<span style="color: rgb(0, 128, 255);">
+						<strong>研究所回应集体离职 被挖走的！</strong>
+					</span>
 				</section>
 				<section class="other-section"></section>
 				<section
@@ -3766,7 +3698,9 @@
 					"
 					class="other-section"
 				>
-					据了解，核安全所是中国科学院合肥物质科学研究院下属研究所。该研究所一名负责离职管理的工作人员称，90多名科研人员于6月份集体向该研究院提出离职，“<strong>他们都是自愿离职的，现离职手续都已经办完。</strong>”
+					据了解，核安全所是中国科学院合肥物质科学研究院下属研究所。该研究所一名负责离职管理的工作人员称，90多名科研人员于6月份集体向该研究院提出离职，“
+					<strong>他们都是自愿离职的，现离职手续都已经办完。</strong>
+					”
 				</section>
 				<section
 					style="
@@ -3820,10 +3754,7 @@
 					"
 					class="other-section"
 				></section>
-				<section
-					style="margin-left: 16px; margin-right: 16px;"
-					class="other-section"
-				>
+				<section style="margin-left: 16px; margin-right: 16px;" class="other-section">
 					<br />
 				</section>
 				<section
@@ -3846,7 +3777,8 @@
 					"
 					class="other-section"
 				>
-					&nbsp;最后给读者整理了一份大厂面试真题，需要的可扫码加我微信获取。<br />
+					&nbsp;最后给读者整理了一份大厂面试真题，需要的可扫码加我微信获取。
+					<br />
 				</section>
 				<section
 					style="
@@ -3885,10 +3817,7 @@
 						data-original-src="mmbiz.qpic.cn/mmbiz_png/Uic0S1r5o6OvViaHqykkOHyzTaCkmDSYFXexIrrkBCG4ghiandLVbtyV2v79BslCNrVnqXax3d8icIx6ndXukrYiaPw/640"
 					/>
 				</section>
-				<section
-					style="margin-left: 16px; margin-right: 16px;"
-					class="other-section"
-				>
+				<section style="margin-left: 16px; margin-right: 16px;" class="other-section">
 					<br />
 				</section>
 				<section
@@ -3955,9 +3884,7 @@
 							class="other-section"
 						>
 							<section>
-								<section
-									style="letter-spacing: 0.544px; text-align: center;"
-								>
+								<section style="letter-spacing: 0.544px; text-align: center;">
 									<section
 										powered-by="xiumi.us"
 										style="
@@ -4075,8 +4002,9 @@
 																					font-size: 13px;
 																					font-weight: bolder;
 																				"
-																				>好文点个在看吧！</span
 																			>
+																				好文点个在看吧！
+																			</span>
 																		</section>
 																		<p><br /></p>
 																	</section>
@@ -4233,6 +4161,7 @@ function scrollToEl(id) {
 	if (__total < __height) {
 		return
 	}
+	console.log(__total, __height)
 	$('html, body').animate(
 		{
 			scrollTop: $(window).scrollTop() + __total - __height + 30
@@ -4326,8 +4255,7 @@ function insertPro() {
 		var risk_title = $(this).data('risk_title')
 		var risk_features = $(this).data('features_info')
 		var _html = ''
-		_html +=
-			'<div class="art-section-new product-section" style="padding-bottom:46px;">'
+		_html += '<div class="art-section-new product-section" style="padding-bottom:46px;">'
 		_html += '<a href="javascript:void(0);" data-href="' + risk_detail_link + '">'
 		_html += '<div class="product-info">'
 		_html += '<img src="' + risk_cover + '" />'
@@ -4699,9 +4627,7 @@ export default {
 						$.toast('文章摘要最多输入64个字', 'text')
 						return
 					}
-					article_des = $('#summernote').summernote('isEmpty')
-						? ''
-						: $(_html).text()
+					article_des = $('#summernote').summernote('isEmpty') ? '' : $(_html).text()
 					checkArticleDes()
 				} else {
 					// 修改
@@ -4958,27 +4884,15 @@ export default {
 									$('.feed_footer .feed_cancel').addClass('hidden')
 									$('.feed_footer .back_edit').removeClass('hidden')
 									$('.feed_footer .feed_submit').addClass('hidden')
-									$('.feed_con .feed_item').removeClass(
-										'feed_item_active'
-									)
+									$('.feed_con .feed_item').removeClass('feed_item_active')
 									$('.feed_con').empty()
 									$('.feed_con').append(_htmlStr)
 									$('.feed_con .feed_item').on('click', function() {
 										var curType = $(this).data('type')
-										if (
-											curType == 'porn' ||
-											curType == 'terrorism' ||
-											curType == 'ad'
-										) {
-											if (
-												$('.feed_footer_l .feed_btn').hasClass(
-													'hidden'
-												)
-											) {
+										if (curType == 'porn' || curType == 'terrorism' || curType == 'ad') {
+											if ($('.feed_footer_l .feed_btn').hasClass('hidden')) {
 												$(this).hasClass('feed_item_active')
-													? $(this).removeClass(
-															'feed_item_active'
-													  )
+													? $(this).removeClass('feed_item_active')
 													: $(this).addClass('feed_item_active')
 											}
 										}
@@ -5122,18 +5036,15 @@ export default {
 			this.imgUrl = file.content
 		},
 		afterRead2(file) {
-			console.log(2, file.content)
 			var _html = ''
-			_html +=
-				'<div class="art-section-new"><img src="' + file.content + '"/></div>'
+			_html += '<div class="art-section-new"><img src="' + file.content + '"/></div>'
 			$('.art-content').prepend(_html)
 			articleEventListener()
 			$.toast('上传成功', 'text')
 		},
 		afterRead3(file) {
 			var _html = ''
-			_html +=
-				'<div class="art-section-new"><img src="' + file.content + '"/></div>'
+			_html += '<div class="art-section-new"><img src="' + file.content + '"/></div>'
 			if ($('.cur_edit_con').closest('.art-section').length) {
 				// 旧版之前文章的div
 				$('.cur_edit_con')
@@ -5207,16 +5118,11 @@ export default {
 							success: function(res) {
 								// alert(res.url)
 								var _html = ''
-								_html +=
-									'<div class="art-section-new"><img src="' +
-									res.url +
-									'"/></div>'
+								_html += '<div class="art-section-new"><img src="' + res.url + '"/></div>'
 								if (isAddTop) {
 									$('.art-content').prepend(_html)
 								} else {
-									if (
-										$('.cur_edit_con').closest('.art-section').length
-									) {
+									if ($('.cur_edit_con').closest('.art-section').length) {
 										// 旧版之前文章的div
 										$('.cur_edit_con')
 											.closest('.art-section')
